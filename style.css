@@ -5,11 +5,13 @@
   --magenta-color: magenta;
   --yellow-color: yellow;
   --black-color: black;
+  cursor: none;
 }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,6 +36,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  cursor: none;
 }
 
 img {
@@ -111,4 +117,24 @@ img {
   top: 40%;
   left: 10%;
   width: 33.33%;
+}
+
+.custom-cursor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference; /* Add the mix-blend-mode property with the difference value */
+}
+
+.custom-cursor::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white; /* Change the background color to white */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  
 }
