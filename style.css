@@ -6,6 +6,7 @@
   --yellow-color: #fff000;
   --black-color: black;
   cursor: none;
+  background-color: white
 }
 body {
   margin: 0;
@@ -123,6 +124,7 @@ img {
   position: absolute;
   pointer-events: none;
   z-index: 9999;
+/*   background-color: black; */
   mix-blend-mode: difference; /* Add the mix-blend-mode property with the difference value */
 }
 
