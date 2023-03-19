@@ -1,7 +1,10 @@
-/* Boilerplate CSS */
 :root {
   --unselected-color: grey;
   --hover-color: black;
+  --cyan-color: cyan;
+  --magenta-color: magenta;
+  --yellow-color: yellow;
+  --black-color: black;
 }
 body {
   margin: 0;
@@ -11,10 +14,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  
 }
 
 p {
   margin: 0;
+  
 }
 
 ul {
@@ -35,16 +40,12 @@ img {
   height: auto;
 }
 
-/* Add your custom styles below this line */
-
-/* Custom styles for class title */
 .name {
-  font-size: 3em;
+  font-size: clamp(1.5rem, 3em, 3em);
   text-align: center;
   font-style: italic;
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
-  /* Remove position, top, left, and transform properties */
   order: 1;
 }
 
@@ -56,22 +57,65 @@ img {
   font-family: 'Merriweather', serif;
  
   gap: 18px;
-  color: var(--unselected-color); /* Change color to light grey */
+  color: var(--unselected-color);
   order: 2;
 }
 .links a:link, .links a:visited {
-  color: var(--unselected-color); /* Set link color to light grey */
+  color: var(--unselected-color); 
+  position: relative; 
 }
 .links a:hover {
   color: var(--hover-color); /* Set link color to black on hover */
   transition: color 0.6s ease; /* Add fade effect */
 }
+.links a:before { /* Add pseudo-element for underline */
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--hover-color);
+  visibility: hidden;
+  transition: all 0.6s ease;
+}
 
-/* Custom styles for div called content */
+.links a#Twitter:before {
+  background-color: var(--cyan-color);
+}
+
+.links a#GitHub:before {
+  background-color: var(--magenta-color);
+}
+
+.links a#About:before {
+  background-color: var(--yellow-color);
+}
+
+.links a:hover:before {
+  visibility: visible;
+  width: 100%; /* Animate underline growing from left to right */
+}
+
 .content {
-  display: flex; /* Flex box layout */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center elements horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.about {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 33.33%;
+}
+
+.aboutH {
+  font-family: 'Raleway', sans-serif;
+}
+
+.aboutP {
+  font-family: 'Merriweather', serif;
 }
