@@ -14,12 +14,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
   margin: 0;
-  
+  font-style: italic;
+  font-family: 'Merriweather', serif;
 }
 
 ul {
@@ -41,7 +42,7 @@ img {
 }
 
 .name {
-  font-size: clamp(1.5rem, 3em, 3em);
+  font-size: clamp(1.5rem, 5vw, 3em);
   text-align: center;
   font-style: italic;
   font-family: 'Raleway', sans-serif;
@@ -110,12 +111,4 @@ img {
   top: 40%;
   left: 10%;
   width: 33.33%;
-}
-
-.aboutH {
-  font-family: 'Raleway', sans-serif;
-}
-
-.aboutP {
-  font-family: 'Merriweather', serif;
 }
