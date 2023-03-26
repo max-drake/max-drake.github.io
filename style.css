@@ -57,6 +57,11 @@ img {
   order: 1;
 }
 
+#inlineLink{
+  color: #000;
+  text-decoration: underline;
+}
+
 .links {
   display: flex;
   justify-content: center;
@@ -98,6 +103,10 @@ img {
 
 .links a#About:before {
   background-color: var(--yellow-color);
+}
+
+.links a#Alexandria:before {
+  background-color: var(--black-color);
 }
 
 .links a:hover:before {
